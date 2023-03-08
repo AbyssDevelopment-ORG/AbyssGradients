@@ -1,0 +1,9 @@
+command:
+    base-command: "gradient"
+    aliases:
+        - "gradients"
+        - "grad"
+        - "abyssgradient"
+        - "abyssgradients"
+        - "ag"
+        - "g"
