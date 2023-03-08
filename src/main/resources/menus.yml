@@ -1,0 +1,104 @@
+menus:
+    gradients:
+        title: "&8&lGRADIENTS"
+        rows: 4
+        borders:
+            "gray":
+                material: "GRAY_STAINED_GLASS_PANE"
+                name: " "
+                lore: [ ]
+                slots:
+                    - "0-26"
+        items:
+            next:
+                slot: 32
+                material: "LIME_DYE"
+                name: "&aNext Page &7(%current%)"
+                lore: []
+            current:
+                slot: 31
+                material: "COMPASS"
+                name: "&eCurrent Page &7(%current%)"
+                lore: []
+            previous:
+                slot: 30
+                material: "RED_DYE"
+                name: "&cPrevious Page &7(%current%)"
+                lore: []
+            reset:
+                slot: 35
+                material: "BARRIER"
+                name: "&cReset Gradient"
+                lore: []
+            current-gradient:
+                slot: 27
+                material: "PAPER"
+                name: "&eCurrent Gradient"
+                lore:
+                    - " "
+                    - "&7Current Gradient: %gradient%"
+                    - " "
+        gradients:
+            winter:
+                locked:
+                    material: "BARRIER"
+                    name: "#CEC4BA(#747474❄#CEC4BA) #145d74W#13586ei#125367l#114e61d#10495be#0f4455s#0d3e4et #0c3948W#0b3442i#0a2f3bn#092a35t#0a2f3be#0b3442r #0c3948G#0d3e4er#0f4455a#10495bd#114e61i#125367e#13586en#145d74t #CEC4BA(#747474❄#CEC4BA)"
+                    lore:
+                        - " "
+                        - "#CEC4BACreated from #ADF3FDice#CEC4BA and snow found only"
+                        - "#CEC4BAin the heart of the #ADF3FDsacred #CEC4BAmountain"
+                        - "#CEC4BAthat has been long #ADF3FDabandoned#CEC4BA."
+                        - " "
+                        - "%luckperms_prefix% %gradient% &7» &fThe Wildest Winter gradient!"
+                        - " "
+                        - "#145d74S#10495bt#0b3442a#0b3442t#10495bu#145d74s: &c&lUnavailable"
+                        - " "
+                        - "&0ka #145d74W#13596fi#125469n#115064t#104b5ee#0f4759r #0e42532#0d3e4e0#0c3a482#0b35432 #0a313dE#092c38v#092c38e#0a313dn#0b3543t #0c3a48E#0d3e4ex#0e4253c#0f4759l#104b5eu#115064s#125469i#13596fv#145d74e &0ka"
+                        - " "
+                        - "#145d74C#0f4455l#092a35i#0f4455c#145d74k#CEC4BA to enable this gradient"
+                        - " "
+                unlocked:
+                    material: "SNOW_BLOCK"
+                    name: "#CEC4BA(#747474❄#CEC4BA) #145d74W#13586ei#125367l#114e61d#10495be#0f4455s#0d3e4et #0c3948W#0b3442i#0a2f3bn#092a35t#0a2f3be#0b3442r #0c3948G#0d3e4er#0f4455a#10495bd#114e61i#125367e#13586en#145d74t #CEC4BA(#747474❄#CEC4BA)"
+                    lore:
+                        - " "
+                        - "#CEC4BACreated from #ADF3FDice#CEC4BA and snow found only"
+                        - "#CEC4BAin the heart of the #ADF3FDsacred #CEC4BAmountain"
+                        - "#CEC4BAthat has been long #ADF3FDabandoned#CEC4BA."
+                        - " "
+                        - "%luckperms_prefix% %gradient% &7» &fThe Wildest Winter gradient!"
+                        - " "
+                        - "#145d74S#10495bt#0b3442a#0b3442t#10495bu#145d74s: &a&lAvailable"
+                        - " "
+                        - "&0ka #145d74W#13596fi#125469n#115064t#104b5ee#0f4759r #0e42532#0d3e4e0#0c3a482#0b35432 #0a313dE#092c38v#092c38e#0a313dn#0b3543t #0c3a48E#0d3e4ex#0e4253c#0f4759l#104b5eu#115064s#125469i#13596fv#145d74e &0ka"
+                        - " "
+                        - "#145d74C#0f4455l#092a35i#0f4455c#145d74k#CEC4BA to enable this gradient"
+                        - " "
+        slots:
+            - 0
+            - 1
+            - 2
+            - 3
+            - 4
+            - 5
+            - 6
+            - 7
+            - 8
+            - 9
+            - 10
+            - 11
+            - 12
+            - 13
+            - 14
+            - 15
+            - 16
+            - 17
+            - 18
+            - 19
+            - 20
+            - 21
+            - 22
+            - 23
+            - 24
+            - 25
+            - 26
