@@ -1,0 +1,26 @@
+Input: ''
+Output: ''
+String Encryption: 'false'
+Flow Obfuscation: 'true'
+ReferenceEncryption: 'false'
+Field ReferenceEncryption: 'true'
+Number Obfuscation: 'true'
+SourceInfo Remover: 'true'
+LineNumber Transformer: Remove
+Inject Antidebugger: 'false'
+LocalVariableTransformer: Remove
+Crasher: 'false'
+Shuffle Members: 'true'
+Access Transformer: 'false'
+ClassFolders: 'false'
+Boolean Transformer: 'true'
+Renamer: 'true'
+Method Renamer: 'false'
+Method Renamer Dictonary: iIiIiIi
+Field Renamer: 'true'
+Field Renamer Dictonary: iIiIiIi
+Dictionary: ALPHABET_UPPER
+Dependencies: ['resources.jar', 'rt.jar', 'sunrsasign.jar', 'jsse.jar', 'jce.jar', 'charsets.jar', 'jfr.jar', 'spigot-1.17.1.jar']
+Exclusions: ['Global: com/', 'Global: edu/', 'Global: io/', 'Global: javax/', 'Global:
+    me/', 'Global: nonapi/', 'Global: org/', 'Global: uk/', 'Global: co/']
+Inclusions: []
