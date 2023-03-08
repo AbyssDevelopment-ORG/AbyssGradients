@@ -1,0 +1,70 @@
+messages:
+    help:
+        sound:
+            enabled: true
+            value: "BLOCK_NOTE_PLING"
+            volume: 1
+            pitch: 1
+        message:
+            enabled: true
+            value:
+                - "&3&m--------------------------------"
+                - " "
+                - "&b&lAbyss&3&lGradients &8&l┃ &bHelp"
+                - " "
+                - "&7&o(( <> = REQUIRED, [] = OPTIONAL ))"
+                - " "
+                - "&3&lCOMMANDS:"
+                - "&3&l» &b/gradient"
+                - "&3&l» &b/gradient help"
+                - " "
+                - "&3&m--------------------------------"
+    admin-help:
+        sound:
+            enabled: true
+            value: "BLOCK_NOTE_PLING"
+            volume: 1
+            pitch: 1
+        message:
+            enabled: true
+            value:
+                - "&3&m--------------------------------"
+                - " "
+                - "&b&lAbyss&3&lVaults &8&l┃ &bAdmin Help"
+                - " "
+                - "&7&o(( <> = REQUIRED, [] = OPTIONAL ))"
+                - " "
+                - "&3&lCOMMANDS:"
+                - "&3&l» &b/gradient reset <player>"
+                - " "
+                - "&3&m--------------------------------"
+    set-gradient:
+        sound:
+            enabled: true
+            value: "BLOCK_NOTE_PLING"
+            volume: 1
+            pitch: 1
+        message:
+            enabled: true
+            value:
+                - "&b&lAbyss &8- &bYou have &3successfully&b set your gradient!"
+    reset:
+        sound:
+            enabled: true
+            value: "BLOCK_NOTE_PLING"
+            volume: 1
+            pitch: 1
+        message:
+            enabled: true
+            value:
+                - "&b&lAbyss &8- &bYou &3reset&b your gradient."
+    reset-admin:
+        sound:
+            enabled: true
+            value: "BLOCK_NOTE_PLING"
+            volume: 1
+            pitch: 1
+        message:
+            enabled: true
+            value:
+                - "&b&lAbyss &8- &bYou &3reset&b the gradient of %player%."
