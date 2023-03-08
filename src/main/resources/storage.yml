@@ -1,0 +1,7 @@
+storage:
+    type: "JSON"
+    host:
+    port:
+    database:
+    username:
+    password:
