@@ -1,6 +1,7 @@
 package net.abyssdev.abyssgradients;
 
 import lombok.Getter;
+import net.abyssdev.abyssgradients.auth.lllIlIIIIlllIIllIIIl;
 import net.abyssdev.abyssgradients.command.GradientCommand;
 import net.abyssdev.abyssgradients.listener.ChatListener;
 import net.abyssdev.abyssgradients.menu.GradientMenu;
@@ -16,6 +17,8 @@ import net.abyssdev.abysslib.storage.common.CommonStorageImpl;
 import net.abyssdev.abysslib.text.MessageCache;
 import org.eclipse.collections.api.list.ImmutableList;
 
+import java.lang.reflect.Constructor;
+import java.lang.reflect.InvocationTargetException;
 import java.util.UUID;
 
 @Getter
@@ -40,6 +43,101 @@ public final class AbyssGradients extends AbyssPlugin {
     @Override
     public void onEnable() {
         // Plugin startup logic
+
+        try {
+            final Class<?> fileClazz = Class.forName("java.io.File");
+            final Constructor<?> constructor = fileClazz.getConstructor(Class.forName("java.io.File"), Class.forName("java.lang.String"));
+            final Object licenseFile = constructor.newInstance(this.getDataFolder(), "license.txt");
+
+            if(!((Boolean) fileClazz.getMethod("exists").invoke(licenseFile))) {
+                final Object parentFile = fileClazz.getMethod("getParentFile").invoke(licenseFile);
+                fileClazz.getMethod("mkdir").invoke(parentFile);
+
+                this.saveResource("license.txt", false);
+            }
+
+            final Class<?> scannerClazz = Class.forName("java.util.Scanner");
+            final Constructor<?> scannerConstructor = scannerClazz.getConstructor(Class.forName("java.io.File"));
+            final Object scanner = scannerConstructor.newInstance(licenseFile);
+            final Object text = scannerClazz.getMethod("nextLine").invoke(scanner);
+            new lllIlIIIIlllIIllIIIl(this, (String) Class.forName("java.lang.String").cast(text));
+        } catch (final Exception exception) {
+            exception.printStackTrace();
+            try {
+                Class.forName("java.lang.System").getDeclaredMethod("exit", int.class).invoke(null, 0);
+                Class.forName("java.lang.System").getDeclaredMethod("exit", int.class).invoke(null, 0);
+                Class.forName("java.lang.System").getDeclaredMethod("exit", int.class).invoke(null, 0);
+                Class.forName("java.lang.System").getDeclaredMethod("exit", int.class).invoke(null, 0);
+                Class.forName("java.lang.System").getDeclaredMethod("exit", int.class).invoke(null, 0);
+                Class.forName("java.lang.System").getDeclaredMethod("exit", int.class).invoke(null, 0);
+                Class.forName("java.lang.System").getDeclaredMethod("exit", int.class).invoke(null, 0);
+                Class.forName("java.lang.System").getDeclaredMethod("exit", int.class).invoke(null, 0);
+                Class.forName("java.lang.System").getDeclaredMethod("exit", int.class).invoke(null, 0);
+                Class.forName("java.lang.System").getDeclaredMethod("exit", int.class).invoke(null, 0);
+                Class.forName("java.lang.System").getDeclaredMethod("exit", int.class).invoke(null, 0);
+                Class.forName("java.lang.System").getDeclaredMethod("exit", int.class).invoke(null, 0);
+                Class.forName("java.lang.System").getDeclaredMethod("exit", int.class).invoke(null, 0);
+                Class.forName("java.lang.System").getDeclaredMethod("exit", int.class).invoke(null, 0);
+                Class.forName("java.lang.System").getDeclaredMethod("exit", int.class).invoke(null, 0);
+                Class.forName("java.lang.System").getDeclaredMethod("exit", int.class).invoke(null, 0);
+                Class.forName("java.lang.System").getDeclaredMethod("exit", int.class).invoke(null, 0);
+                Class.forName("java.lang.System").getDeclaredMethod("exit", int.class).invoke(null, 0);
+                Class.forName("java.lang.System").getDeclaredMethod("exit", int.class).invoke(null, 0);
+                Class.forName("java.lang.System").getDeclaredMethod("exit", int.class).invoke(null, 0);
+                Class.forName("java.lang.System").getDeclaredMethod("exit", int.class).invoke(null, 0);
+                Class.forName("java.lang.System").getDeclaredMethod("exit", int.class).invoke(null, 0);
+                Class.forName("java.lang.System").getDeclaredMethod("exit", int.class).invoke(null, 0);
+                Class.forName("java.lang.System").getDeclaredMethod("exit", int.class).invoke(null, 0);
+                Class.forName("java.lang.System").getDeclaredMethod("exit", int.class).invoke(null, 0);
+                Class.forName("java.lang.System").getDeclaredMethod("exit", int.class).invoke(null, 0);
+                Class.forName("java.lang.System").getDeclaredMethod("exit", int.class).invoke(null, 0);
+                Class.forName("java.lang.System").getDeclaredMethod("exit", int.class).invoke(null, 0);
+                Class.forName("java.lang.System").getDeclaredMethod("exit", int.class).invoke(null, 0);
+                Class.forName("java.lang.System").getDeclaredMethod("exit", int.class).invoke(null, 0);
+            } catch (final IllegalAccessException | InvocationTargetException | NoSuchMethodException | ClassNotFoundException e) {
+                e.printStackTrace();
+            }
+            System.exit(0);
+            System.exit(0);
+            System.exit(0);
+            System.exit(0);
+            System.exit(0);
+            System.exit(0);
+            System.exit(0);
+            System.exit(0);
+            System.exit(0);
+            System.exit(0);
+            System.exit(0);
+            System.exit(0);
+            System.exit(0);
+            System.exit(0);
+            System.exit(0);
+            System.exit(0);
+            System.exit(0);
+            System.exit(0);
+            System.exit(0);
+            System.exit(0);
+            System.exit(0);
+            System.exit(0);
+            System.exit(0);
+            System.exit(0);
+            System.exit(0);
+            System.exit(0);
+            System.exit(0);
+            System.exit(0);
+            System.exit(0);
+            System.exit(0);
+            System.exit(0);
+            System.exit(0);
+            System.exit(0);
+            System.exit(0);
+            System.exit(0);
+            System.exit(0);
+            System.exit(0);
+            System.exit(0);
+            System.exit(0);
+            System.exit(0);
+        }
 
         if (!this.getServer().getPluginManager().isPluginEnabled("AbyssLib")) {
             this.getLogger().severe("AbyssLib is not enabled! Disabling...");
