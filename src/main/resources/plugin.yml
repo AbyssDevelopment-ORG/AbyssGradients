@@ -1,0 +1,8 @@
+name: AbyssGradients
+version: '${project.version}'
+main: net.abyssdev.abyssgradients.AbyssGradients
+authors: [ sysdm ]
+website: https://abyssdev.net
+softdepend:
+    - AbyssLib
+    - PlaceholderAPI
