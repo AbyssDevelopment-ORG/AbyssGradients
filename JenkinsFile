@@ -6,7 +6,7 @@ pipeline {
             steps {
                 sh "cp -r /home/Infrastructure/Obfuscation/Dependencies/* ."
                 sh "sudo JAVA_HOME=/usr/lib/jvm/java-1.8.0-openjdk-amd64 mvn clean install"
-                sh "/usr/lib/jvm/java-8-openjdk-amd64/bin/java -jar /home/Infrastructure/Obfuscation/qprotect.jar --input target/AbyssGradients-PRE.jar --output AbyssGradients.jar --config Obfuscation/config.yml"
+                sh "/usr/lib/jvm/java-8-openjdk-amd64/bin/java -jar /home/Infrastructure/Obfuscation/qprotect.jar --config Obfuscation/config.yml --input target/AbyssGradients-PRE.jar --output AbyssGradients.jar"
             }
             post {
                 success {
