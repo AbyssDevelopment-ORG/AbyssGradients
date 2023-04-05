@@ -1,6 +1,7 @@
 name: AbyssGradients
 version: '${project.version}'
 main: net.abyssdev.abyssgradients.AbyssGradients
+api-version: 1.13
 authors: [ sysdm ]
 website: https://abyssdev.net
 softdepend:
