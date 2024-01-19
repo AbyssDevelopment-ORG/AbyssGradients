@@ -6,7 +6,7 @@
 
     <groupId>net.abyssdev</groupId>
     <artifactId>AbyssGradients</artifactId>
-    <version>1.0-SNAPSHOT</version>
+    <version>1.0.0</version>
     <packaging>jar</packaging>
 
     <name>AbyssGradients</name>
@@ -40,7 +40,7 @@
                         </goals>
                         <configuration>
                             <minimizeJar>true</minimizeJar>
-                            <finalName>AbyssGradients-PRE</finalName>
+                            <finalName>AbyssGradients</finalName>
                             <createDependencyReducedPom>false</createDependencyReducedPom>
                             <filters>
                                 <filter>
@@ -70,9 +70,15 @@
             <id>spigotmc-repo</id>
             <url>https://hub.spigotmc.org/nexus/content/repositories/snapshots/</url>
         </repository>
+
         <repository>
             <id>sonatype</id>
             <url>https://oss.sonatype.org/content/groups/public/</url>
+        </repository>
+
+        <repository>
+            <id>placeholderapi</id>
+            <url>https://repo.extendedclip.com/content/repositories/placeholderapi/</url>
         </repository>
     </repositories>
 
@@ -83,6 +89,7 @@
             <version>1.17.1-R0.1-SNAPSHOT</version>
             <scope>provided</scope>
         </dependency>
+
         <dependency>
             <groupId>net.abyssdev</groupId>
             <artifactId>AbyssLib</artifactId>
@@ -90,16 +97,26 @@
             <systemPath>${basedir}/libs/AbyssLib.jar</systemPath>
             <scope>system</scope>
         </dependency>
+
         <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
             <version>1.18.24</version>
             <scope>provided</scope>
         </dependency>
+
         <dependency>
             <groupId>com.googlecode.json-simple</groupId>
             <artifactId>json-simple</artifactId>
             <version>1.1.1</version>
+            <scope>provided</scope>
+        </dependency>
+
+
+        <dependency>
+            <groupId>me.clip</groupId>
+            <artifactId>placeholderapi</artifactId>
+            <version>2.11.1</version>
             <scope>provided</scope>
         </dependency>
     </dependencies>
