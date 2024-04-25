@@ -13,42 +13,4 @@ pipeline {
             }
         }
     }
-
-    post {
-        always {
-            cleanWs()
-            script {
-                def project = env.JOB_NAME.split('\\/')[-1]
-                def status = currentBuild.result ?: 'UNKNOWN'
-                def changeList = []
-                currentBuild.changeSets.each { changeSet ->
-                    changeSet.items.each { item ->
-                        def shortCommitId = item.commitId.substring(0, 7)
-                        def author = item.author.displayName.split("\\+")[-1]
-                        def msg = "`${shortCommitId}` ${item.msg} - ${author}"
-                        changeList.add("- $msg")
-                    }
-                }
-                def date = new Date()
-                def formattedDate = date.format('yyyy-MM-dd HH:mm:ss z')
-                def buildTime = ((System.currentTimeMillis() - currentBuild.startTimeInMillis) / 1000).intValue()
-                def minutes = (buildTime / 60).intValue()
-                def seconds = (buildTime % 60).intValue()
-                def buildTimeFormatted = ""
-                if (minutes >= 1) {
-                    buildTimeFormatted += "${minutes}m "
-                }
-                buildTimeFormatted += "${seconds}s"
-                def payload = [
-                    webhookURL: "https://discord.com/api/webhooks/1232904114267099266/JbOAMR2K5xHZ7DS6exVTPbGhr9zPBG0tGHT1c3atqU58OJMVSwIKrgIrDDIdzHMKzP9G",
-                    title: "${project} #${env.BUILD_NUMBER}",
-                    link: env.BUILD_URL,
-                    description: "**Build:** ${env.BUILD_NUMBER}\n**Status:** ${status}\n**Build Time:** ${buildTimeFormatted}\n**Changes:**\n${changeList.join('\n')}",
-                    footer: "Built on ${formattedDate}",
-                    result: currentBuild.currentResult
-                ]
-                discordSend payload
-            }
-        }
-    }
 }
