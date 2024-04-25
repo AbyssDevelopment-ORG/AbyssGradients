@@ -4,13 +4,11 @@ pipeline {
     stages {
         stage("Build") {
             steps {
-                sh "cp -r /home/Infrastructure/Obfuscation/Dependencies/* ."
-                sh "sudo JAVA_HOME=/usr/lib/jvm/java-1.8.0-openjdk-amd64 mvn clean install"
-                sh "/usr/lib/jvm/java-8-openjdk-amd64/bin/java -jar /home/Infrastructure/Obfuscation/qprotect.jar --config Obfuscation/config.yml --input target/AbyssGradients-PRE.jar --output AbyssGradients.jar"
+                sh " "
             }
             post {
                 success {
-                    archiveArtifacts artifacts: 'AbyssGradients.jar'
+                    archiveArtifacts artifacts: 'target/AbyssGradients.jar'
                 }
             }
         }
@@ -42,7 +40,7 @@ pipeline {
                 }
                 buildTimeFormatted += "${seconds}s"
                 def payload = [
-                    webhookURL: "https://discord.com/api/webhooks/1081522759970074686/lcMd3h5jqoREtc_C5qQGeXgeyRXue5MC90P8uztMuE_962cMWkW5enk-4OEdsbmdy2vH",
+                    webhookURL: "https://discord.com/api/webhooks/1232904114267099266/JbOAMR2K5xHZ7DS6exVTPbGhr9zPBG0tGHT1c3atqU58OJMVSwIKrgIrDDIdzHMKzP9G",
                     title: "${project} #${env.BUILD_NUMBER}",
                     link: env.BUILD_URL,
                     description: "**Build:** ${env.BUILD_NUMBER}\n**Status:** ${status}\n**Build Time:** ${buildTimeFormatted}\n**Changes:**\n${changeList.join('\n')}",
